@@ -3,6 +3,6 @@ export class VisionService {
     }
 
     public run() {
-        console.info(`running`);
+        console.info(`running`)
     }
 }

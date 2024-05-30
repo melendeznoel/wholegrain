@@ -1,1 +1,1 @@
-export * from './VisionService';
+export * from './VisionService'

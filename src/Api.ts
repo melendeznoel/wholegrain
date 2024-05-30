@@ -1,5 +1,4 @@
-import express, { NextFunction, Request, Response, Express, Router } from 'express'
-
+import express, { type NextFunction, type Request, type Response, type Express, Router } from 'express'
 
 export class Api {
   public instance: Express
@@ -47,7 +46,7 @@ export class Api {
     })
   }
 
-  public setRoutes(){
+  public setRoutes () {
     this.routing.get('/info', (req: Request, res: Response, next: NextFunction) => {
       res.status(200).json({ name: 'info', description: 'dev api' })
     })
