@@ -1,9 +1,9 @@
-import { LocalEventEmitter } from './LocalEventEmitter'
-import { LocalEventTypes } from './types'
-import { Logger } from 'winston'
+import { type LocalEventEmitter } from './LocalEventEmitter'
+import { type LocalEventTypes } from './types'
+import { type Logger } from 'winston'
 
 export class SubscriptionService {
-  constructor (private logger: Logger,  private localEventEmitter: LocalEventEmitter<LocalEventTypes>) {}
+  constructor (private readonly logger: Logger, private readonly localEventEmitter: LocalEventEmitter<LocalEventTypes>) {}
 
   public startPatientCreatedSubscription (): void {
     this.localEventEmitter.on('NewPatient', (data) => {

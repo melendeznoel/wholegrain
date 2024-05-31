@@ -17,7 +17,7 @@ export class Api {
     this.setErrorHandler()
   }
 
-  public setMiddleware () {
+  public setMiddleware (): void {
     /** RULES OF OUR API */
     this.instance.use((req: Request, res: Response, next: NextFunction) => {
       // set the CORS policy
@@ -36,7 +36,7 @@ export class Api {
     })
   }
 
-  public setErrorHandler () {
+  public setErrorHandler (): void {
     /** Error handling */
     this.instance.use((req: Request, res: Response, next: NextFunction) => {
       const error = new Error('not found')
@@ -46,7 +46,7 @@ export class Api {
     })
   }
 
-  public setRoutes () {
+  public setRoutes (): void {
     this.routing.get('/info', (req: Request, res: Response, next: NextFunction) => {
       res.status(200).json({ name: 'info', description: 'dev api' })
     })

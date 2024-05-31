@@ -1,8 +1,11 @@
-export class VisionService {
-    constructor(config: any) {
-    }
+import { type Logger } from 'winston'
 
-    public run() {
-        console.info(`running`)
-    }
+export class VisionService {
+  constructor (private readonly logger: Logger, config: any) {
+  }
+
+  public run (): boolean {
+    this.logger.info('Running Vision Service')
+    return true
+  }
 }

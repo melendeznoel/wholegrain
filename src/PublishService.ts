@@ -1,10 +1,11 @@
-import { LocalEventEmitter } from './LocalEventEmitter'
-import { LocalEventTypes } from './types'
+import { type LocalEventEmitter } from './LocalEventEmitter'
+import { type LocalEventTypes } from './types'
 
 export class PublishService {
-  constructor (private localEventEmitter: LocalEventEmitter<LocalEventTypes>) {}
+  constructor (private readonly localEventEmitter: LocalEventEmitter<LocalEventTypes>) {
+  }
 
- public newPatient(patient: any): void {
+  public newPatient (patient: any): void {
     this.localEventEmitter.emit('NewPatient', patient)
- }
+  }
 }
