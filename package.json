@@ -4,8 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "start": "node dist/index.js",
-    "dev": "ts-node src/index.ts",
+    "start": "node dist/Index.js",
+    "dev": "ts-node src/Index.ts",
     "test": "mocha",
     "build": "tsc -p .",
     "lint": "eslint **/*.ts"
