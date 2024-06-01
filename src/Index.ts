@@ -2,7 +2,7 @@ import { logger } from './logging'
 
 import { Api } from './Api'
 
-const port = 3001
+const port = 443
 
 logger.info('Starting API')
 
