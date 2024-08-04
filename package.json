@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node dist/Index.js",
     "dev": "ts-node src/Index.ts",
-    "test": "mocha",
+    "test": "node --register ts-node/register test/*.test.ts",
     "build": "tsc -p .",
     "lint": "eslint **/*.ts"
   },
