@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node dist/Index.js",
     "dev": "ts-node src/Index.ts",
-    "test": "node --require ts-node/register --test .",
+    "test": "node --test --require ts-node/register test/grain/VisionService.test.ts",
     "build": "npx tsc -p .",
     "lint": "eslint **/*.ts"
   },
